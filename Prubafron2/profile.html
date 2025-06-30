@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Armería WoW – Perfil</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel&family=Open+Sans&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="profile-hero">
+    <!-- Fondo translúcido: assets/bg-translucido.jpg -->
+    <div class="overlay"></div>
+
+    <!-- Slider de ilustraciones -->
+    <div class="gallery">
+      <button id="prev">&lt;</button>
+      <!-- Aquí se mostrará cada imagen de 'slides' -->
+      <img id="slide" src="" alt="Galería de arte" />
+      <button id="next">&gt;</button>
+    </div>
+
+    <div class="profile-container">
+      <!-- Título: Nombre de personaje – Reino -->
+      <h1 id="tituloJugador"></h1>
+
+      <!-- Avatar GIF: assets/hunter-beast.gif -->
+      <img
+        src="imagenes/cazador_bestia_2.png"
+        class="icono"
+        alt="Avatar Cazador Bestia"
+      />
+
+      <!-- Datos dinámicos -->
+      <div class="stats">
+        <p><strong>Nombre:</strong> <span id="charName"></span></p>
+        <p><strong>Reino:</strong>  <span id="realm"></span></p>
+        <p><strong>Raza:</strong>   <span id="race"></span></p>
+        <p><strong>Clase:</strong>  <span id="charClass"></span></p>
+        <button onclick="toggleStats()">Mostrar/Ocultar estadísticas</button>
+        <div id="statsExtras" class="extra-stats">
+          <p>Fuerza: 120</p>
+          <p>Resistencia: 85</p>
+          <p>Habilidad: 93</p>
+        </div>
+      </div>
+
+      <button class="logout" onclick="cerrarSesion()">Cerrar sesión</button>
+    </div>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>

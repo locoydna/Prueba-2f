@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Armería WoW – Login / Registro</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel&family=Open+Sans&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hero">
+    <!-- GIF animado: assets/hunter-beast.gif -->
+    <img
+      src="imagenes/cazador_bestia.png"
+      class="loop-gif"
+      alt="Cazador Orco Bestia animado"
+    />
+
+    <div class="form-container">
+      <h1 class="brand">Armería WoW</h1>
+
+      <!-- ——— FORMULARIO LOGIN ——— -->
+      <form id="loginForm">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" id="loginUser" placeholder="Usuario" required />
+        <input
+          type="password"
+          id="loginPass"
+          placeholder="Contraseña"
+          required
+        />
+        <button type="submit">Entrar</button>
+      </form>
+
+      <!-- ——— FORMULARIO REGISTRO ——— -->
+      <form id="registerForm">
+        <h2>Registrarse</h2>
+        <!-- Usuario y contraseña -->
+        <input
+          type="text"
+          id="registerUser"
+          placeholder="Usuario"
+          required
+        />
+        <input
+          type="password"
+          id="registerPass"
+          placeholder="Contraseña"
+          required
+        />
+
+        <!-- Nombre de personaje -->
+        <input
+          type="text"
+          id="registerCharName"
+          placeholder="Nombre de Personaje"
+          required
+        />
+
+        <!-- Selector de reino -->
+        <select id="registerRealm" required>
+          <option value="">Elige Reino</option>
+          <option value="Ragnarok">Ragnarok</option>
+          <option value="Drakari">Drakari</option>
+          <option value="Shatra">Shatra</option>
+        </select>
+
+        <!-- Selector de raza -->
+        <select id="registerRace" required>
+          <option value="">Elige Raza</option>
+          <optgroup label="Horda">
+            <option value="Orco">Orco</option>
+            <option value="Troll">Troll</option>
+            <option value="No-muerto">No-muerto</option>
+            <option value="Elfo de sangre">Elfo de sangre</option>
+            <option value="Goblin">Goblin</option>
+            <option value="Panda">Panda</option>
+          </optgroup>
+          <optgroup label="Alianza">
+            <option value="Humano">Humano</option>
+            <option value="Elfo de la noche">Elfo de la noche</option>
+            <option value="Enano">Enano</option>
+            <option value="Gnomo">Gnomo</option>
+            <option value="Panda">Panda</option>
+            <option value="Dranei">Dranei</option>
+          </optgroup>
+        </select>
+
+        <!-- Selector de clase -->
+        <select id="registerClass" required>
+          <option value="">Elige Clase</option>
+          <option value="Cazador">Cazador</option>
+          <option value="Cazador de demonio">Cazador de demonio</option>
+          <option value="Paladín">Paladín</option>
+          <option value="Guerrero">Guerrero</option>
+          <option value="Pícaro">Pícaro</option>
+          <option value="Sacerdote">Sacerdote</option>
+          <option value="Mago">Mago</option>
+          <option value="Brujo">Brujo</option>
+          <option value="Monje">Monje</option>
+        </select>
+
+        <button type="submit">Registrarse</button>
+      </form>
+
+      <!-- Mensaje de error/éxito -->
+      <p id="message" class="message-area"></p>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+/*----------------------------------------------------------
+  Importar fuentes y definir variables de color
+----------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Open+Sans&display=swap');
+
+:root {
+  --bg-gradient: linear-gradient(to bottom, #0a0a0a, #1f1f1f);
+  --accent-gold: #b08b4f;
+  --text-light: #e0e0e0;
+  --panel-bg: rgba(0, 0, 0, 0.75);
+  --btn-hover-glow: #007bff;
+}
+
+/*----------------------------------------------------------
+  Reset y globales
+----------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-light);
+  min-height: 100vh;
+}
+
+/*----------------------------------------------------------
+  HERO (Index) – fondo beast1.png + GIF loop
+----------------------------------------------------------*/
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url('imagenes/cazador_bestia.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loop-gif {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  width: 180px;
+  pointer-events: none;
+}
+
+/*----------------------------------------------------------
+  PROFILE-HERO (Profile) – fondo bg-translucido.jpg + overlay
+----------------------------------------------------------*/
+.profile-hero {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background: url('imagenes/colina2.0.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-hero .overlay {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/*----------------------------------------------------------
+  Gallery Slider (Profile)
+----------------------------------------------------------*/
+.gallery {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.gallery img {
+  width: 160px;
+  border: 2px solid var(--accent-gold);
+  border-radius: 6px;
+  margin: 0 1rem;
+}
+.gallery button {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.gallery button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/*----------------------------------------------------------
+  Contenedores de formulario y perfil
+----------------------------------------------------------*/
+.form-container,
+.profile-container {
+  position: relative;
+  z-index: 2;
+  background: var(--panel-bg);
+  border: 2px solid var(--accent-gold);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 340px;
+  box-shadow: 0 0 15px #000;
+  backdrop-filter: blur(5px);
+  text-align: center;
+}
+
+/*----------------------------------------------------------
+  Títulos
+----------------------------------------------------------*/
+.brand {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px #000;
+}
+h2 {
+  font-family: 'Cinzel', serif;
+  color: var(--accent-gold);
+  margin-bottom: 0.5rem;
+}
+
+/*----------------------------------------------------------
+  Inputs y botones
+----------------------------------------------------------*/
+input,
+button {
+  width: 100%;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 5px;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+input:focus {
+  outline: 2px solid var(--accent-gold);
+}
+button {
+  cursor: pointer;
+}
+button:hover {
+  background-color: #444;
+  transform: scale(1.04);
+  box-shadow: 0 0 10px var(--btn-hover-glow);
+}
+
+/*----------------------------------------------------------
+  Mensajes dinámicos
+----------------------------------------------------------*/
+.message-area {
+  min-height: 1.5em;
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+/*----------------------------------------------------------
+  Avatar animado en profile
+----------------------------------------------------------*/
+.icono {
+  width: 120px;
+  border: 2px solid var(--accent-gold);
+  border-radius: 50%;
+  margin: 1rem auto;
+  display: block;
+  transition: transform 0.6s, box-shadow 0.6s;
+}
+.icono:hover {
+  transform: rotateY(360deg);
+  box-shadow: 0 0 20px #00ffff;
+}
+
+/*----------------------------------------------------------
+  Estadísticas y logout
+----------------------------------------------------------*/
+.stats {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  text-align: left;
+}
+.extra-stats {
+  display: none;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.logout {
+  background: #700000;
+  padding: 0.7rem;
+  margin-top: 1rem;
+}
+.logout:hover {
+  background: #900000;
+  box-shadow: 0 0 10px #ff0000;
+}
